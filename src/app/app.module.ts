@@ -5,6 +5,11 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 
+//services
+import { SpotifyService } from './services/spotify.service';
+
+
+
 //rutas
 import { APP_ROUTING } from './app.routes';
 
@@ -31,7 +36,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     APP_ROUTING
     
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
