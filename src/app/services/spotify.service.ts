@@ -12,12 +12,11 @@ import { map } from 'rxjs/operators';
 })
 export class SpotifyService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) { }
 
-
-    console.log('servicio funciona');
+  getQuery(query:string){
+    
   }
-
 
   getNewReleases() {
 
