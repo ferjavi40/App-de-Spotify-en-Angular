@@ -8,6 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 //services
 import { SpotifyService } from './services/spotify.service';
 
+//pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+
 
 
 //rutas
@@ -21,6 +24,7 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +32,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
+    NoimagePipe,
     
   ],
   imports: [
