@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 
 
 
@@ -33,6 +34,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
+    TarjetaComponent,
     
   ],
   imports: [
