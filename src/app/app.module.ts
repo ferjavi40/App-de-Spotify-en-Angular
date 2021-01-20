@@ -11,6 +11,11 @@ import { SpotifyService } from './services/spotify.service';
 //pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 
+//x spinner angular
+import { NgxSpinnerModule } from "ngx-spinner";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 
 //rutas
@@ -42,6 +47,8 @@ import { LoadingComponent } from './shared/loading/loading.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule ,
     APP_ROUTING
     
   ],

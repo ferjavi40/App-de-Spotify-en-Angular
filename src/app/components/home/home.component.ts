@@ -8,30 +8,30 @@ import { SpotifyService } from '../../services/spotify.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent  {
+export class HomeComponent {
 
-  nuevasCanciones: any [] = [];
+  nuevasCanciones: any[] = [];
 
   loading: boolean;
 
 
-  constructor( private spotify: SpotifyService ) { 
- 
+  constructor(private spotify: SpotifyService) {
+
     this.loading = true;
 
     this.spotify.getNewReleases()
-        .subscribe((data: any) =>{
-          
+      .subscribe((data: any) => {
 
-          setTimeout(()=> {
-            this.nuevasCanciones= data;
-            this.loading= false;
-          },1000)
+        setTimeout(() => {
+          this.loading = false;
+          this.nuevasCanciones = data;
+
+        }, 1000)
 
 
-          
-        });
-  
+
+      });
+
 
   }
 
