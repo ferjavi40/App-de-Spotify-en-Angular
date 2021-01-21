@@ -22,20 +22,22 @@
 <div class="row mt-5 text-light">
     <div class="col">
         <table class="table">
-            <thead>
+            <thead class="text-center">
                 <tr>
                     <th>Foto</th>
                     <th>Cancion</th>
                     <th>Album</th>
+                    <th>Lanzamiento</th>
                     <th>Vista Previa</th>
                 </tr>
             </thead>
             <tbody *ngFor="let track of topTracks">
                 <tr>
-                    <td></td>
+                    <td><img [src]="track.album.images | noimage" [alt]="track.name" class="img-thumb"></td>
                     <td>{{track.name}}</td>
                     <td>{{track.album.name}}</td>
-                    <td></td>
+                    <td>{{track.album.release_date | date: 'y'}}</td>
+                    <td><audio [src]="track.preview_url" controls></audio></td>
                 </tr>
             </tbody>
 
