@@ -22,15 +22,12 @@ export class HomeComponent {
     this.spotify.getNewReleases()
       .subscribe((data: any) => {
 
-        setTimeout(() => {
+        setTimeout(()=>{
           this.loading = false;
           this.nuevasCanciones = data;
+        },1000);
 
-        }, 1000)
-
-
-
-      });
+  });
 
 
   }
