@@ -14,6 +14,7 @@ import { SpotifyService } from '../../services/spotify.service';
 export class ArtistaComponent {
 
   artista: any = {};
+  
   topTracks: any = [];
 
   loadingArtist: boolean;
