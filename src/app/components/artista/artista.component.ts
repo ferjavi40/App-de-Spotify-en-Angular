@@ -17,17 +17,17 @@ export class ArtistaComponent {
   
   topTracks: any = [];
 
-  loadingArtist: boolean;
+  loading: boolean;
 
   constructor(private router: ActivatedRoute,
                 private spotify:SpotifyService) {
 
-    this.loadingArtist = true;
+    this.loading = true;
 
     this.router.params.subscribe(params => {
 
       setTimeout(()=>{
-        this.loadingArtist = false;
+        this.loading = false;
         this.getArtista( params ['id']);
         this.getTopTracks( params ['id']);
 
@@ -37,15 +37,14 @@ export class ArtistaComponent {
   }
 
   getArtista( id: string){
-    this.loadingArtist = true;
+    this.loading = true;
 
     this.spotify.getArtista(id)
           .subscribe( artista =>{
 
             setTimeout(()=>{
-              this.loadingArtist = false;
+              this.loading = false;
               this.artista= artista;
-              console.log(this.artista);
             },1000);
         
           });

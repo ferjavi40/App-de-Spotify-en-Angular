@@ -34,6 +34,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
     DomSeguroPipe,
     TarjetaComponent,
     LoadingComponent,
+  
     
   ],
   imports: [
