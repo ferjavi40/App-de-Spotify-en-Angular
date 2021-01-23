@@ -37,7 +37,7 @@
                     <td>{{track.name}}</td>
                     <td>{{track.album.name}}</td>
                     <td>{{track.album.release_date | date: 'y'}}</td>
-                    <td><audio [src]="track.preview_url" controls></audio></td>
+                    <iframe [src]="track.uri | domSeguro : 'https://open.spotify.com/embed?uri='" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </tr>
             </tbody>
 

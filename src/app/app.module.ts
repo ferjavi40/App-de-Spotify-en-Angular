@@ -10,6 +10,8 @@ import { SpotifyService } from './services/spotify.service';
 
 //pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
+
 
 //x spinner angular
 import { NgxSpinnerModule } from "ngx-spinner";
@@ -40,6 +42,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
+    DomSeguroPipe,
     TarjetaComponent,
     LoadingComponent,
     
